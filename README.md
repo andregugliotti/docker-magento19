@@ -74,7 +74,7 @@ To connect to a DB from another container, like from a framework running on php 
 
 ### Using PHPMyAdmin
 
-This project is shipped with a PHPMyAdmin instance. It is accessible via 8084 port. So, just navigate to `project1.docker.dev:8084` and use same credentials informed at docker-compose.yml file.
+This project is shipped with a PHPMyAdmin instance. It is accessible via 8084 port. So, just navigate to `m1.docker.dev:8084` and use same credentials informed at docker-compose.yml file.
 
 ## Contribution
 
