@@ -20,17 +20,16 @@ Just open your terminal and navigate to docker-magento19 of this project. Type:
 
 Docker will build the containers and start them. You must also map the address _127.0.0.1 m1.docker.dev_ on your hosts file. If you don't know how to do that, just google it. It's easy!
 
-### Importing Magento DB
+### First access to project site
 
-On this project you find a base DB, on folder sample-db. To use it, you just import it over magento1 DB, using PHPMyAdmin or your favourite MySQL client.
-If you prefer not use sample data, just comment this line on _docker-compose-yml_, _project_ node, rebuild your containers and proceed to a regular install of Magento.
+**Before accessing the Magento site**, you must decide if you want to use the sample data or use a clean install.
+
+If you prefer not use the sample data, just comment this line on _docker-compose-yml_, _project_ node, **rebuild your containers** and proceed to a regular install of Magento, accessing the site.
 
 `- local.xml:/var/www/htdocs/etc/local.xml`
 
-### Changing project / htdocs files
-
-To see your site live, just open a browser and visit m1.docker.dev. That's exactly what you find at folder htdocs and it's automatically updated when you change them on your local machine. So, you don't need to rebuild your container to see your files.
-Don't forget that the live folder is htdocs. Project folder is only local.
+If you prefer to use the sample data, you must import it. On this project you find a base DB, on folder sample-db. To use it, you just import it over magento1 DB, using PHPMyAdmin or your favourite MySQL client.
+After that, when you access the project site, you must see a complete RWD theme, with all elements on home page, like banners and products.
 
 ### Accessing Magento backend
 
@@ -38,11 +37,17 @@ When using sample data, just navigate to m1.docker.dev/admin and access the pane
 
 username: `admin`
 password: `a123456`
- 
+
+### Changing project / htdocs files
+
+To see your site live, just open a browser and visit m1.docker.dev. That's exactly what you find at folder htdocs and it's automatically updated when you change them on your local machine. So, you don't need to rebuild your container to see your files.
+Don't forget that the live folder is htdocs. Project folder is only local.
+
 ### Seeing logs
 
 All logs are saved locally, on folder docker-magento19/logs. You can control them on your local machine.
 Access logs are disabled from nginx config files. If you need them, see docker-magento19/nginx conf files.
+To see Magento logs, just open you var/logs and var/report folders, under htdocs.
 
 ### Accessing the container terminal
 
