@@ -1,0 +1,8 @@
+.idea/
+/docker-magento19/databases/*
+!/docker-magento19/databases/.gitkeep
+/docker-magento19/logs/*
+!/docker-magento19/logs/nginx/.gitkeep
+!/docker-magento19/logs/php/.gitkeep
+/htdocs/var/*
+!/htdocs/var/.htaccess
