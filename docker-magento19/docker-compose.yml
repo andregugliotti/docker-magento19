@@ -29,6 +29,7 @@ project:
   image: alpine:latest
   volumes:
     - ../htdocs:/var/www/htdocs
+    - ./local.xml:/var/www/htdocs/app/etc/local.xml
   command: "true"
 
 mysql:

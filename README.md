@@ -24,7 +24,9 @@ Docker will build the containers and start them. You must also map the address _
 ### Importing Magento DB
 
 On this project you find a base DB, on folder sample-db. To use it, you just import it over magento1 DB, using PHPMyAdmin or your favourite MySQL client.
-If you prefer not use sample data, just delete the local.xml file, on docker-magento19 folder and proceed to a regular install of Magento. 
+If you prefer not use sample data, just comment this line on _docker-compose-yml_, _project_ node, rebuild your containers and proceed to a regular install of Magento.
+
+`- local.xml:/var/www/htdocs/etc/local.xml`
 
 ### Changing project / htdocs files
 
