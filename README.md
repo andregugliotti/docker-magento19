@@ -18,7 +18,7 @@ Just open your terminal and navigate to docker-magento19 of this project. Type:
 
 `docker-compose up -d`
 
-Docker will build the containers and start them. You must also map the address _127.0.0.1 m1.docker.dev_ on your hosts file. If you don't know how to do that, just google it. It's easy!
+Docker will build the containers and start them. You must also map the address _127.0.0.1 m1.docker.local_ on your hosts file. If you don't know how to do that, just google it. It's easy!
 
 ### First access to project site
 
@@ -33,14 +33,14 @@ After that, when you access the project site, you must see a complete RWD theme,
 
 ### Accessing Magento backend
 
-When using sample data, just navigate to m1.docker.dev/admin and access the panel with these credentials:
+When using sample data, just navigate to m1.docker.local/admin and access the panel with these credentials:
 
 username: `admin`
 password: `a123456`
 
 ### Changing project / htdocs files
 
-To see your site live, just open a browser and visit m1.docker.dev. That's exactly what you find at folder htdocs and it's automatically updated when you change them on your local machine. So, you don't need to rebuild your container to see your files.
+To see your site live, just open a browser and visit m1.docker.local. That's exactly what you find at folder htdocs and it's automatically updated when you change them on your local machine. So, you don't need to rebuild your container to see your files.
 Don't forget that the live folder is htdocs. Project folder is only local.
 
 ### Seeing logs
@@ -74,7 +74,7 @@ To connect to a DB from another container, like from a framework running on php 
 
 ### Using PHPMyAdmin
 
-This project is shipped with a PHPMyAdmin instance. It is accessible via 8084 port. So, just navigate to `m1.docker.dev:8084` and use same credentials informed at docker-compose.yml file.
+This project is shipped with a PHPMyAdmin instance. It is accessible via 8084 port. So, just navigate to `m1.docker.local:8084` and use same credentials informed at docker-compose.yml file.
 
 ## Contribution
 
