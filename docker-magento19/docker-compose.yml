@@ -1,5 +1,6 @@
 nginx:
   build: ./nginx/
+  container_name: magento19_nginx
   ports:
     - 80:80
   links:
@@ -13,6 +14,7 @@ nginx:
 
 phpfpm:
   build: ./php/
+  container_name: magento19_php
   ports:
     - 9000:9000
   links:
@@ -27,6 +29,7 @@ phpfpm:
 
 project:
   image: alpine:latest
+  container_name: magento19_project
   volumes:
     - ../htdocs:/var/www/htdocs
     - ./local.xml:/var/www/htdocs/app/etc/local.xml
@@ -34,6 +37,7 @@ project:
 
 mysql:
   image: mysql:5.7
+  container_name: magento19_mysql
   ports:
     - 3306:3306
   volumes:
@@ -46,6 +50,7 @@ mysql:
 
 phpmyadmin:
   image: phpmyadmin/phpmyadmin
+  container_name: magento19_myadmin
   restart: always
   ports:
     - 8084:80

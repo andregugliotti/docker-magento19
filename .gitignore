@@ -6,3 +6,5 @@
 !/docker-magento19/logs/php/.gitkeep
 /htdocs/var/*
 !/htdocs/var/.htaccess
+/htdocs/media/*
+!/htdocs/media/.htaccess
